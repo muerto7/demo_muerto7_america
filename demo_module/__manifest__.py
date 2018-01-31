@@ -9,5 +9,6 @@
     'depends' : [],
     'data' : [
         'views/demo_odoo11_view.xml',
+        'security/ir.model.access.csv',
     ],
 }
