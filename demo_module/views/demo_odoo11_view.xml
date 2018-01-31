@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="demo_odoo_11_tree" model="ir.ui.view">
+            <field name="name">demo.odoo.11.tree</field>
+            <field name="model">demo.odoo.11</field>
+            <field name="arch" type="xml">
+                <tree string="Tree">
+                    <field name="texto"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="demo_odoo_11_form" model="ir.ui.view">
+            <field name="name">demo.odoo.11.form</field>
+            <field name="model">demo.odoo.11</field>
+            <field name="arch" type="xml">
+                <form string="Form">
+                    <group>
+                        <group string="Group">
+                            <field name="texto"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="demo_odoo_11_action" model="ir.actions.act_window">
+            <field name="name">Action</field>
+            <field name="res_model">demo.odoo.11</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="odoo_demo_11_menu" name="Menu1"/>
+        <menuitem id="odoo_demo_11_submenu" name="Menu2" parent="odoo_demo_11_menu" sequence="0"/>
+        <menuitem id="odoo_demo_11_submenu_texto" name="Menu3" parent="odoo_demo_11_submenu" action="demo_odoo_11_action" sequence="0"/>
+    </data>
+</odoo>
